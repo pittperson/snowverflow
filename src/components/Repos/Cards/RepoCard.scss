@@ -1,0 +1,22 @@
+.repo-card {
+  width: 100px;
+  height: 100px;
+  flex: 1 1 25%;
+  border: 1px solid #ccc;
+}
+
+.repo-name {
+  padding: 5px;
+  color: #fff;
+  background-color: #0574ba;
+}
+
+.repo-name a {
+  color: #cde4fe;
+}
+
+.repo-name a:hover {
+  font-weight: bold;
+  color: #ebf4ff;
+
+}
