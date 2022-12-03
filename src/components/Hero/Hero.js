@@ -52,7 +52,7 @@ const Hero = (props) => {
         .substring(1, window.location.pathname.length - 1)
         .split(";")
         .forEach((tag) => {
-          console.log(tag);
+          // console.log(tag);
           tempDrillTags.push(
             <Badge key={tag} className="me-1 my-1 bg-secondary">
               {tag}
@@ -122,13 +122,13 @@ const Hero = (props) => {
 
     if (searchFor) {
       queryTack = switchCase(answerState);
-      console.log(queryTack);
+      // console.log(queryTack);
 
       searchFor.replace(/[+#]/gi, "\\$&");
       queryUrl = `https://api.stackexchange.com/2.3/search/advanced?tagged=[${filters}]&page=${pageNum}&pagesize=${pageSize}&title=${searchFor}&site=stackoverflow&key=DkLwlYTWw9AoNuzTYgmnUg((${queryTack}`;
-      console.log(queryUrl);
+      // console.log(queryUrl);
     } else if (queryList) {
-      console.log(queryList);
+      // console.log(queryList);
       queryUrl = `https://api.stackexchange.com/2.3/questions?tagged=[${queryList}]&page=${pageNum}&pagesize=${pageSize}&site=stackoverflow&key=DkLwlYTWw9AoNuzTYgmnUg((`;
     } else {
       queryUrl = `https://api.stackexchange.com/2.3/questions?tagged=[${filters}]&page=${pageNum}&pagesize=${pageSize}&site=stackoverflow&key=DkLwlYTWw9AoNuzTYgmnUg((`;

@@ -7,19 +7,22 @@ const Tag = (props) => {
 
   useEffect(() => {
     checkForTagMatch();
-  }, [match]);
-
-  // console.log(props.tag);
+  }, []);
 
   let variant = "";
 
   let propsTag = props.tag.replace(/[+#]/g, "\\$&");
   let regEx = new RegExp(`(${propsTag});`, "gi");
 
+  console.log(propsTag);
+
   const checkForTagMatch = () => {
-    // console.log(window.location.pathname);
-    if (window.location.pathname.match(regEx)) {
+    if (
+      window.location.pathname.includes(propsTag) ||
+      propsTag.includes("snowflake")
+    ) {
       setTagHref(window.location.pathname.replace(regEx, ""));
+      // setTagHref(`${window.location.pathname}${props.tag};`);
       setMatch("yes");
     } else {
       setTagHref(`${window.location.pathname}${props.tag};`);
@@ -27,7 +30,7 @@ const Tag = (props) => {
     }
   };
 
-  props.filters.match(regEx)
+  match === "yes"
     ? (variant = "outline-snowblue")
     : (variant = "outline-secondary");
 

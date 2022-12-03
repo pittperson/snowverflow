@@ -138,7 +138,7 @@ const Header = (props) => {
           <Modal.Title>About snowverflow</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div>
+          {/* <div>
             New to Twilio, I was browsing stack
             <span style={{ fontWeight: "bold" }}>overflow</span> and me, being
             me, thought, "there has to be a quicker way to consume everything
@@ -150,7 +150,7 @@ const Header = (props) => {
             <span style={{ fontWeight: "bold" }}>overflow</span>. Want to narrow
             things down? Just click on a tag below the title.
           </div>
-          <br />
+          <br /> */}
           <div>
             This site is always changing. If it's broken, I'm making it better!
           </div>
@@ -170,7 +170,7 @@ const Header = (props) => {
             />
 
             <DropdownButton
-              variant="darkcyan"
+              variant="snowblue"
               title="Search"
               id="input-group-dropdown-2"
               align="end"
@@ -204,7 +204,7 @@ const Header = (props) => {
 
           <div className="d-grid gap-2">
             <Button
-              className="mx-1 my-1 bg-darkcyan"
+              className="mx-1 my-1 bg-snowblue"
               size="sm"
               onClick={() => handleSearchByTags(searchTags)}
             >
