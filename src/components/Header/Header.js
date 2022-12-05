@@ -111,7 +111,7 @@ const Header = (props) => {
                 Contact
               </Nav.Link>
 
-              <Nav.Link href="/charts/twilio">Visualize</Nav.Link>
+              <Nav.Link href="/charts/snowflake">Visualize</Nav.Link>
 
               {/* <Nav.Link href="/repos">GitHub Repo List</Nav.Link> */}
 
@@ -127,7 +127,7 @@ const Header = (props) => {
             <Col>
               <Badge className="bg-success">Accepted Answer</Badge>{" "}
               <Badge className="bg-warning">Unaccepted Answer</Badge>{" "}
-              <Badge className="bg-snowblue">No Answer</Badge>{" "}
+              <Badge className="bg-danger">No Answer</Badge>{" "}
             </Col>
           </Row>
         </Container>
